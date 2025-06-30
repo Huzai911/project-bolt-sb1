@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Robot peeking animation */
+@keyframes peek {
+  0%, 100% { transform: translateX(-50%); }
+  50% { transform: translateX(0); }
+}
+
+.animate-peek {
+  animation: peek 2s ease-in-out infinite;
+}
+
+@keyframes robot-blink {
+  0%, 90%, 100% { opacity: 1; }
+  95% { opacity: 0.3; }
+}
+
+.animate-robot-blink {
+  animation: robot-blink 3s ease-in-out infinite;
+}
+
+/* Floating animation for AI elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glowing effect for AI mode */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(147, 51, 234, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.6); }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
